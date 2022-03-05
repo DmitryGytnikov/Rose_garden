@@ -1,27 +1,28 @@
 'use strict';
 
+// Бургер
+let burger = document.querySelector(`.header-middle__btn`);
+let headerBottomMenu = document.querySelector(`.header-burger-menu`);
+
+burger.addEventListener(`click`, function (evt) {
+  evt.preventDefault();
+  burger.classList.toggle(`header-middle__btn--active`);
+  headerBottomMenu.classList.toggle(`header-burger-menu--active`);
+});
+
+
 $(function () {
 
-  // // Табы в скрытом меню в header-middle на main.html
-  // $('.tab').hover(function(e) {
-  //   e.preventDefault();
-
-  //   $($(this).closest('.menu-hidden__tabs').find('li').find('a')).removeClass('tab--active');
-  //   $($(this).closest('.menu-hidden__tabs').siblings().find('ul')).removeClass('tabs-content--active');
-
-  //   $(this).addClass('tab--active');
-  //   $($(this).attr('href')).addClass('tabs-content--active');
-  // });
-
-  // // Появляющееся меню в header-middle на main.html
-  // $('.header-middle__burger').hover(function(e) {
-  //   e.preventDefault();
-
-  //   $($(this).closest('.header').find('.menu-hidden')).addClass('menu-hidden--active');
-  // });
-
-
-
+  // Главный слайдер на main.html
+  $('.presentation__slider-big').slick({
+    // prevArrow: $('.main-slider_arrow.left'),
+    // nextArrow: $('.main-slider_arrow.right'),
+    // appendDots: $('.main-slider_dots'),
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000
+  });
 
 
 });
