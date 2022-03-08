@@ -15,13 +15,23 @@ $(function () {
 
   // Главный слайдер на main.html
   $('.presentation__slider-big').slick({
-    // prevArrow: $('.main-slider_arrow.left'),
-    // nextArrow: $('.main-slider_arrow.right'),
-    // appendDots: $('.main-slider_dots'),
     dots: true,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 4000,
+    slidesToShow: 1,
+    // variableWidth: true,
+  });
+
+
+  // Cлайдер main__about-slider на main.html
+  $('.main__about-slider').slick({
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 1,
+    // variableWidth: true,
   });
 
 
