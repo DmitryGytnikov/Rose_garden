@@ -34,7 +34,54 @@ $(function () {
     // variableWidth: true,
   });
 
- // Фильтр на main.html
+
+  // Cлайдер product-card-slider на main.html
+  $('.product-card-slider').slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // margin: 20,
+    responsive: [{
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 835,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+        // centerMode: true,
+        // centerPadding: '25px',
+        // margin: 0,
+      }
+    }]
+  });
+
+
+  // Cлайдер main__about-slider на main.html
+  $('.about__qualification-slider').slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+
+    responsive: [{
+      breakpoint: 760,
+      settings: {
+        dots: true,
+        arrows: false,
+      }
+    }]
+  });
+
+
+  // Фильтр на main.html
   $('.main-filters__button').click(function(e) {
     e.preventDefault();
     $(this).toggleClass('main-filters__button--active');

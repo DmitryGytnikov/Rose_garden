@@ -6,6 +6,7 @@
     content="width=device-width,initial-scale=1.0">
   <title>Розовый сад</title>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/TTNorms-Light.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/TTNorms-Regular.woff2" as="font" crossorigin>
@@ -20,11 +21,11 @@
                 <div class="container">
                     <div class="header-top__box">
                         <ul class="header-top__link">
-                            <li><a href="about.html">О питомнике</a></li>
+                            <li><a href="#">О питомнике</a></li>
                             <li><a href="#">Прайс-лист</a></li>
                             <li><a href="#">Статьи</a></li>
                             <li><a href="#">Контакты</a></li>
-                            <li><a href="delivery.html">Доставка и оплата</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
                         </ul>
                         <div class="header-top__inner">
                             <div class="header-top__mail">
@@ -47,7 +48,7 @@
             </div>
             <div class="container">
                   <div class="header-middle">
-                      <a class="header-middle__logo" aria-label="На главную страницу" title="На главную">
+                      <a class="header-middle__logo" href="index.html" aria-label="На главную страницу" title="На главную">
                           <svg width="194" height="42" viewBox="0 0 194 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M23.0698 5.16514C23.9179 5.81811 24.7136 6.53543 25.4495 7.31061C24.5848 8.01479 23.7661 8.77264 22.9982 9.5796C22.254 8.79829 21.4624 8.0627 20.6277 7.37694C21.3811 6.57572 22.1986 5.83605 23.0721 5.16514H23.0698ZM23.0698 1C20.117 2.79775 17.5962 5.213 15.6836 8.07685C18.6092 9.85534 21.106 12.2475 22.9982 15.0851C24.9163 12.2135 27.4521 9.79829 30.4237 8.01281C28.5136 5.17523 26.0045 2.7825 23.0698 1V1Z" fill="#E45D6A"/>
                               <path d="M8.9998 11.2494C9.37604 11.3774 9.74765 11.5147 10.117 11.6656C10.9954 12.0288 11.8442 12.4586 12.656 12.9511C14.8665 14.2878 16.7524 16.0911 18.1794 18.2324C18.6724 18.9736 19.1098 19.7495 19.4882 20.554C20.8922 23.5272 21.4325 26.8292 21.0485 30.0897C20.8673 31.5989 20.4935 33.0792 19.936 34.495C17.6418 33.7304 15.5284 32.5118 13.7239 30.9132C11.9194 29.3146 10.4616 27.3694 9.43887 25.1955C8.41614 23.0216 7.84986 20.6644 7.77438 18.2671C7.6989 15.8697 8.11581 13.4822 8.9998 11.2494V11.2494ZM5.93915 4.74661C3.70132 8.09291 2.36789 11.9525 2.06654 15.9557C1.7652 19.959 2.50602 23.9719 4.21808 27.6102C5.93014 31.2484 8.5561 34.3902 11.8445 36.7347C15.1329 39.0792 18.9737 40.5478 22.9989 41L23.0197 40.968C25.0602 37.901 26.3486 34.4037 26.782 30.7553C27.294 26.4409 26.5801 22.0705 24.7208 18.1364C24.2227 17.079 23.6472 16.0592 22.9989 15.0851C21.104 12.2466 18.604 9.85432 15.6751 8.0769C14.6075 7.42734 13.49 6.86216 12.3328 6.38659C10.2891 5.54746 8.13706 4.99546 5.93915 4.74661V4.74661Z" fill="#E45D6A"/>
@@ -114,7 +115,6 @@
                                 </svg>
                               </li>
                             </ul>
-
 
                           </div>
                         </div>
@@ -308,526 +308,54 @@
 
     <main class="main">
 
-        <div class="container">
-            <div class="presentation__slider-big">
-                <div class="big-item-wr">
-                    <div class="big-item__img">
-                        <picture>
-                            <source media="(min-width: 540px)" srcset="img/content/big-slider.png">
-                            <img src="img/content/big-slider-mobile.png" alt="Изображение">
-                        </picture>
-                    </div>
-                    <div class="big-item__text">
-                        <div>
-                            <span>Статья</span>
-                            <span class="big-item__text-time">8 минут</span>
-                        </div>
-                        <p>Розы чайно-гибридные: посадка и уход</p>
-                        <button  type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-                <div class="big-item-wr">
-                    <div class="big-item__img">
-                        <picture>
-                            <source media="(min-width: 540px)" srcset="img/content/big-slider.png">
-                            <img src="img/content/big-slider-mobile.png" alt="Изображение">
-                        </picture>
-                    </div>
-                    <div class="big-item__text">
-                        <div>
-                            <span>Статья</span>
-                            <span class="big-item__text-time">10 минут</span>
-                        </div>
-                        <p>Розы чайно-гибридные: посадка и уход</p>
-                        <button  type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-                <div class="big-item-wr">
-                    <div class="big-item__img">
-                        <picture>
-                            <source media="(min-width: 540px)" srcset="img/content/big-slider.png">
-                            <img src="img/content/big-slider-mobile.png" alt="Изображение">
-                        </picture>
-                    </div>
-                    <div class="big-item__text">
-                        <div>
-                            <span>Статья</span>
-                            <span class="big-item__text-time">12 минут</span>
-                        </div>
-                        <p>Розы чайно-гибридные: посадка и уход</p>
-                        <button  type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-                <div class="big-item-wr">
-                    <div class="big-item__img">
-                        <picture>
-                            <source media="(min-width: 540px)" srcset="img/content/big-slider.png">
-                            <img src="img/content/big-slider-mobile.png" alt="Изображение">
-                        </picture>
-                    </div>
-                    <div class="big-item__text">
-                        <div>
-                            <span>Статья</span>
-                            <span class="big-item__text-time">14 минут</span>
-                        </div>
-                        <p>Розы чайно-гибридные: посадка и уход</p>
-                        <button  type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popular-categories">
+        <div class="breadcrumbs">
             <div class="container">
-                <p class="popular-categories__title">Популярные категории</p>
-                <div class="popular-categories__inner">
-                    <div class="popular-categories__mobile-overflow">
-                        <div class="popular-categories__list">
-                            <a class="popular-categories__slider-item">
-                                <div class="popular-categories__img">
-                                    <img src="img/content/popular-categories-1.png" alt="Товар">
-                                </div>
-                                <p>Плодовые деревья</p>
-                            </a>
-                            <a class="popular-categories__slider-item">
-                                <div class="popular-categories__img">
-                                    <img src="img/content/popular-categories-2.png" alt="Товар">
-                                </div>
-                                <p>Хвойные растения</p>
-                            </a>
-                            <a class="popular-categories__slider-item">
-                                <div class="popular-categories__img">
-                                    <img src="img/content/popular-categories-3.png" alt="Товар">
-                                </div>
-                                <p>Ягодные кустарники</p>
-                            </a>
-                            <a class="popular-categories__slider-item">
-                                <div class="popular-categories__img">
-                                    <img src="img/content/popular-categories-4.png" alt="Товар">
-                                </div>
-                                <p>Декоративные кустарники</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-filters">
-            <div class="container">
-                <div class="main-filters__box">
-                    <h4 class="main-filters__title">Каталог растений</h4>
-                    <ul class="main-filters__buttons">
-                        <li>
-                            <button class="main-filters__button main-filters__button--active" type="button">Новинки</button>
-                        </li>
-                        <li>
-                            <button class="main-filters__button" type="button">Популярные</button>
-                        </li>
-                        <li>
-                            <button class="main-filters__button" type="button">Скидки</button>
-                        </li>
-                    </ul>
-                    <div class="main-filters__options">
-                        <button class="main-filters__options-current" type="button">Новинки</button>
-                        <ul class="main-filters__options-list">
-                            <li>
-                                <button class="main-filters__option">Новинки</button>
-                            </li>
-                            <li>
-                                <button class="main-filters__option">Популярные</button>
-                            </li>
-                            <li>
-                                <button class="main-filters__option">Скидки</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item">
+                        <a href="#"><span>Главная</span></a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a><span>О питомнике</span></a>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="container">
-          <div>
-            <ul class="product-card-slider">
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
-                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-1.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Английские розы</p>
-                            <h4 class="product-card__title">Абрахам дерби</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>27 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price product-card__price--active">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
-                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-2.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Чайно-гибридные</p>
-                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>11 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new product-card__price-new--active">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old product-card__price-old--active">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
-                                <div class="product-card__lbl product-card__lbl-new product-card__lbl-new--active">Новое</div>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-3.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Чайно-гибридные</p>
-                            <h4 class="product-card__title">Аник роуз</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>56 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price product-card__price--active">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
-                                <!-- product-card__lbl-discount--active -->
-                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
-                                <!--  product-card__lbl-new--active -->
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-4.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Флорибунда</p>
-                            <h4 class="product-card__title">Блю фор ю</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>13 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price product-card__price--active">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
-                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-1.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Английские розы</p>
-                            <h4 class="product-card__title">Абрахам дерби</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>27 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price product-card__price--active">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <a href="#">
-                        <div class="product-card__img-wr">
-                            <div class="product-card__lbls">
-                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
-                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="img/content/product-item-2.jpg" alt="Товар">
-                            </div>
-                        </div>
-                        <div class="product-card__info">
-                            <p class="product-card__group">Чайно-гибридные</p>
-                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
-                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
-                            <p class="product-card__in-stock">
-                                В наличии:
-                                <span>11 шт.</span>
-                            </p>
-                            <div class="product-card__inner">
-                                <div class="product-card__price-wr">
-                                    <div class="product-card__price-new product-card__price-new--active">
-                                    <!-- product-card__price-new--active -->
-                                        480 ₽
-                                    </div>
-                                    <div class="product-card__price-old product-card__price-old--active">
-                                    <!-- product-card__price-old--active -->
-                                        600 ₽
-                                    </div>
-                                    <div class="product-card__price">
-                                    <!-- product-card__price--active -->
-                                        200 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-card__basket-box">
-                        <button class="product-card__basket" type="button">В корзину</button>
-                        <div class="product-card__preloader">
-                            <div class="preloader-5"></div>
-                        </div>
-                        <div class="product-card__basket-quantity">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
-                            <div class="product-card__sign" tabindex="0">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
-                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-          </div>
-        </div>
+            <section class="about">
+                <h3 class="about__title">О питомнике</h3>
 
-        <div class="main__about">
-            <div class="container">
-                <div class="main__about-inner">
-
-                    <div class="main__about-info">
-                        <h4 class="main__about-title">О питомнике</h4>
-                        <p class="main__about-text">
-                            Мы реализуем саженцы, которые выращиваем сами. В ассортименте представлены только проверенные сорта растений. Перед отправкой товар упаковывается бережно и надежно.
+                <div class="about__info">
+                    <div class="about__info-text-wr">
+                        <p class="about__info-subtitle">
+                            Наш питомник, расположенный в г. Бутурлиновка, реализует качественные саженцы, которые выращиваются на собственной территории.
                         </p>
-                        <p class="main__about-text-1">
-                            Доставка осуществляется по всей территории Российской Федерации
+                        <p class="about__info-title">Широкий выбор</p>
+                        <p class="about__info-text">
+                            В большом ассортименте представлены саженцы роз самых разных групп и сортов, а также плодовых деревьев, кустарников и декоративных растений. Посадочный материал культивируется при неукоснительном соблюдении строгих требований, вследствие чего полностью соответствует самым высоким стандартам качества.
                         </p>
+                    </div>
+                    <div class="about__info-box">
+                        <p>Компания в цифрах</p>
+                        <svg width="291" height="319" viewBox="0 0 291 319" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.1">
+                            <g clip-path="url(#clip0_899_2567)">
+                            <path d="M224.035 50.1756C232.271 56.5187 239.998 63.487 247.145 71.0174C238.747 77.8579 230.796 85.2199 223.34 93.0589C216.113 85.4691 208.425 78.3234 200.32 71.6617C207.636 63.8784 215.574 56.6931 224.057 50.1756H224.035ZM224.035 9.71427C195.36 27.1781 170.88 50.6406 152.307 78.4608C180.718 95.7375 204.964 118.976 223.34 146.541C241.967 118.645 266.592 95.1834 295.449 77.8387C276.9 50.2737 252.534 27.03 224.035 9.71427V9.71427Z" fill="white"/>
+                            <path d="M87.398 109.279C91.0517 110.524 94.6605 111.857 98.2469 113.323C106.777 116.851 115.021 121.026 122.903 125.811C144.37 138.796 162.684 156.313 176.543 177.115C181.329 184.315 185.577 191.852 189.252 199.668C202.886 228.55 208.133 260.627 204.404 292.3C202.645 306.96 199.015 321.34 193.6 335.094C171.322 327.667 150.798 315.829 133.274 300.3C115.751 284.771 101.594 265.874 91.6619 244.756C81.73 223.638 76.2308 200.74 75.4978 177.452C74.7648 154.163 78.8135 130.97 87.398 109.279ZM57.6757 46.1098C35.9439 78.6167 22.9948 116.11 20.0684 154.998C17.142 193.887 24.3362 232.87 40.9622 268.213C57.5882 303.556 83.0892 334.076 115.023 356.851C146.957 379.626 184.255 393.893 223.345 398.286L223.547 397.975C243.362 368.181 255.874 334.207 260.083 298.766C265.055 256.854 258.122 214.399 240.067 176.182C235.23 165.911 229.641 156.004 223.345 146.541C204.943 118.967 180.666 95.7276 152.222 78.4611C141.855 72.1512 131.003 66.6608 119.765 62.0411C99.9185 53.8894 79.0198 48.5272 57.6757 46.1098Z" fill="white"/>
+                            <path d="M405.694 268.214C389.141 303.439 363.764 333.876 331.982 356.626C300.2 379.375 263.071 393.679 224.133 398.175H223.841H223.236L222.743 397.419C201.225 364.956 188.439 327.578 185.599 288.836C182.758 250.095 189.958 211.277 206.514 176.07C211.393 165.834 217.019 155.964 223.348 146.541C241.975 118.645 266.6 95.1834 295.457 77.8387C301.181 74.4169 307.031 71.2396 313.008 68.3066C336.87 56.6106 362.593 49.0934 389.04 46.0873C410.789 78.5929 423.743 116.095 426.66 154.993C429.576 193.89 422.357 232.878 405.694 268.214Z" fill="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_899_2567">
+                            <path d="M0 0H291V284C291 303.33 275.33 319 256 319H0V0Z" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
                         <ul class="main__about-list">
                             <li class="main__about-item">
                                 <svg width="70" height="32" viewBox="0 0 70 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21.0459 31H0.476562C0.476562 28.8398 0.825195 26.8848 1.52246 25.1348C2.21973 23.3848 3.08789 22.0039 4.12695 20.9922C5.16602 19.9668 6.29395 18.9961 7.51074 18.0801C8.72754 17.1504 9.84863 16.3643 10.874 15.7217C11.9131 15.0654 12.7812 14.3066 13.4785 13.4453C14.1895 12.5703 14.5449 11.6338 14.5449 10.6357C14.5449 9.45996 14.1758 8.53711 13.4375 7.86719C12.7129 7.18359 11.6807 6.8418 10.3408 6.8418C9.27441 6.8418 8.35156 7.14258 7.57227 7.74414C6.80664 8.3457 6.30078 8.94043 6.05469 9.52832L5.72656 10.4102L0.476562 7.9082C0.53125 7.7168 0.620117 7.46387 0.743164 7.14941C0.866211 6.83496 1.19434 6.28125 1.72754 5.48828C2.26074 4.68164 2.87598 3.97754 3.57324 3.37598C4.27051 2.77441 5.25488 2.22754 6.52637 1.73535C7.81152 1.22949 9.21973 0.976562 10.751 0.976562C13.7451 0.976562 16.2061 1.88574 18.1338 3.7041C20.0752 5.52246 21.0459 7.75781 21.0459 10.4102C21.0459 11.9004 20.7246 13.2539 20.082 14.4707C19.4395 15.6875 18.5986 16.7266 17.5596 17.5879C16.5205 18.4355 15.4541 19.2217 14.3604 19.9463C13.2803 20.6572 12.1729 21.4707 11.0381 22.3867C9.90332 23.2891 9.04199 24.1982 8.4541 25.1143H21.0459V31ZM37.6367 11.4766C40.4668 11.4766 42.8184 12.4131 44.6914 14.2861C46.5781 16.1592 47.5215 18.5107 47.5215 21.3408C47.5215 24.3076 46.4893 26.7686 44.4248 28.7236C42.374 30.665 39.6943 31.6357 36.3857 31.6357C34.9912 31.6357 33.6514 31.4717 32.3662 31.1436C31.0947 30.8291 30.0557 30.4463 29.249 29.9951C28.4561 29.5439 27.7588 29.0996 27.1572 28.6621C26.5557 28.2109 26.1318 27.8145 25.8857 27.4727L25.4551 27.001L29.249 23.0225C29.4404 23.2412 29.707 23.5146 30.0488 23.8428C30.4043 24.1572 31.1699 24.5879 32.3457 25.1348C33.5215 25.6816 34.7246 25.9551 35.9551 25.9551C37.5273 25.9551 38.7578 25.5312 39.6465 24.6836C40.5488 23.8223 41 22.708 41 21.3408C41 19.9736 40.5215 18.8252 39.5645 17.8955C38.6211 16.9658 37.418 16.501 35.9551 16.501C34.9434 16.501 34.041 16.6924 33.248 17.0752C32.4551 17.458 31.9014 17.8408 31.5869 18.2236L31.1357 18.8184L26.7266 18.4082L27.7725 1.5918H45.6143V7.06738H33.4531L33.0225 12.5225C34.1436 11.8252 35.6816 11.4766 37.6367 11.4766Z" fill="#8EC682"/>
-                                    <path d="M62.8408 28.4775H58.0215V21.3408H50.8848V16.0908H58.0215V8.9541H62.8408V16.0908H69.998V21.3408H62.8408V28.4775Z" fill="#E45D6A"/>
+                                    <path class="main__about-item-sign" d="M62.8408 28.4775H58.0215V21.3408H50.8848V16.0908H58.0215V8.9541H62.8408V16.0908H69.998V21.3408H62.8408V28.4775Z" fill="#E45D6A"/>
                                 </svg>
                                 <p>Более 25 лет в сфере деятельности</p>
                             </li>
@@ -845,82 +373,106 @@
                             </li>
                         </ul>
                     </div>
+                </div>
 
+                <div class="about__advantages">
+                    <div class="about__advantages-inner">
+                        <img src="img/content/about-advantages.jpg" alt="Изображение">
+                    </div>
+                    <div class="about__advantages-text-wr">
+                        <p class="about__info-title">Опыт работы – 25 лет</p>
+                        <p class="about__info-text">
+                            Наш питомник специализируется на выращивании саженцев уже более 25 лет. За это время накоплен обширный профессиональный опыт, благодаря чему у нас найдется оптимальное решение под любые задачи покупателя.
+                        </p>
+                        <p class="about__info-text">
+                            Предприятие является постоянным участником тематической выставки «Усадьба. Дача. Сад. Огород», которая ежегодно проходит на территории г. Воронеж. Наша продукция награждена многочисленными дипломами и золотыми медалями.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about__qualification">
+                    <div class="about__qualification-text-wr">
+                        <p class="about__info-title">Гарантия качества</p>
+                        <p class="about__info-text">
+                            Все виды и сорта растений, которые поступают в продажу, мы выбираем, руководствуясь целым рядом принципов. Особое значение имеет, в частности, декоративность, а  способность беспроблемно произрастать в любой климатической зоне нашей страны.
+                        </p>
+                        <p class="about__info-text">
+                            У нас вы найдете много новых и интересных сортов, которые привиты на зимостойкий подвой. Ассортимент при этом постоянно дополняется и обновляется.
+                        </p>
+                        <p class="about__info-title">Удобные условия</p>
+                        <p class="about__info-text">
+                            Саженцы реализуются как в разницу, так и оптом. Для оптовых клиентов мы готовы вырастить растения по индивидуальному заказу.
+                        </p>
+                        <p class="about__info-text">
+                            Перед отправкой товар упаковывается бережно и надежно. Доставка осуществляется по всей территории Российской Федерации.
+                        </p>
+                    </div>
+                    <div class="about__qualification-slider-wr">
+                        <ul class="about__qualification-slider">
+                            <li class="about__qualification-slider-item">
+                                <a data-fancybox="" data-src="#popap-qualification-1" href="">
+                                    <img src="img/content/about-qualification-1.jpg" alt="Изображение">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM52 28.8V39.4667L47.6133 35.08L34.28 48.4133L38.6667 52.8H28V42.1333L32.3867 46.52L45.72 33.1867L41.3333 28.8H52Z" fill="white" fill-opacity="0.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="about__qualification-slider-item">
+                                <a data-fancybox="" data-src="#popap-qualification-2" href="">
+                                    <img src="img/content/about-qualification-2.jpg" alt="Изображение">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM52 28.8V39.4667L47.6133 35.08L34.28 48.4133L38.6667 52.8H28V42.1333L32.3867 46.52L45.72 33.1867L41.3333 28.8H52Z" fill="white" fill-opacity="0.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="about__qualification-slider-item">
+                                <a data-fancybox="" data-src="#popap-qualification-1" href="">
+                                    <img src="img/content/about-qualification-1.jpg" alt="Изображение">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM52 28.8V39.4667L47.6133 35.08L34.28 48.4133L38.6667 52.8H28V42.1333L32.3867 46.52L45.72 33.1867L41.3333 28.8H52Z" fill="white" fill-opacity="0.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="about__qualification-slider-item">
+                                <a data-fancybox="" data-src="#popap-qualification-2" href="">
+                                    <img src="img/content/about-qualification-2.jpg" alt="Изображение">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM52 28.8V39.4667L47.6133 35.08L34.28 48.4133L38.6667 52.8H28V42.1333L32.3867 46.52L45.72 33.1867L41.3333 28.8H52Z" fill="white" fill-opacity="0.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about__quote">
                     <div class="main__about-slider-wr">
                         <ul class="main__about-slider">
                             <li class="main__about-slider-item">
                                 <img src="img/content/about-slider-1.png" alt="Изображение">
                             </li>
                             <li class="main__about-slider-item">
-                                <img src="img/content/about-slider-1.png" alt="Изображение">
+                                <img src="img/content/about-slider-2.png" alt="Изображение">
                             </li>
                             <li class="main__about-slider-item">
                                 <img src="img/content/about-slider-1.png" alt="Изображение">
                             </li>
                             <li class="main__about-slider-item">
-                                <img src="img/content/about-slider-1.png" alt="Изображение">
+                                <img src="img/content/about-slider-2.png" alt="Изображение">
                             </li>
                         </ul>
                     </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="article-links">
-            <div class="container">
-                <div class="article-links__inner">
-                    <h4 class="article-links__title">Статьи</h4>
-                    <a href="#">
-                        Все статьи
-                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L6 5L1 9" stroke="#8EC682" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <div class="about__quote-text-wr">
+                        <p>
+                            Напейся - и ты будешь счастлив несколько часов, влюбись - и ты будешь счастлив несколько лет, посади сад - и будешь счастлив всю жизнь. <br> Вырасти свой собственный сад!
+                        </p>
+                        <svg width="76" height="57" viewBox="0 0 76 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.3754 22.5C16.5392 22.5 15.7367 22.6275 14.9379 22.7438C15.1967 21.8738 15.4629 20.9888 15.8904 20.1938C16.3179 19.0388 16.9854 18.0375 17.6492 17.0288C18.2042 15.9376 19.1829 15.1988 19.9029 14.265C20.6567 13.3575 21.6842 12.7538 22.4979 12C23.2967 11.2125 24.3429 10.8188 25.1754 10.2638C26.0454 9.76505 26.8029 9.2138 27.6129 8.9513L29.6342 8.1188L31.4117 7.38005L29.5929 0.112549L27.3542 0.652547C26.6379 0.832547 25.7642 1.04255 24.7704 1.2938C23.7542 1.4813 22.6704 1.99505 21.4629 2.4638C20.2704 2.9963 18.8904 3.3563 17.6079 4.2113C16.3179 5.0288 14.8292 5.7113 13.5167 6.8063C12.2454 7.93505 10.7117 8.9138 9.57917 10.35C8.34167 11.6925 7.11917 13.1025 6.17042 14.7075C5.07167 16.2375 4.32542 17.9175 3.53792 19.5788C2.82542 21.24 2.25167 22.9388 1.78292 24.5888C0.894173 27.8963 0.496673 31.0388 0.342923 33.7276C0.215423 36.4201 0.290423 38.6588 0.447923 40.2788C0.504173 41.0438 0.609173 41.7863 0.684173 42.3001L0.777922 42.93L0.875422 42.9076C1.5424 46.0232 3.07781 48.8863 5.30404 51.1657C7.53026 53.4452 10.3563 55.0478 13.4553 55.7881C16.5543 56.5285 19.7996 56.3764 22.8158 55.3494C25.8319 54.3224 28.4957 52.4625 30.499 49.9849C32.5022 47.5072 33.7631 44.513 34.1357 41.3487C34.5084 38.1843 33.9776 34.9791 32.6047 32.1039C31.2318 29.2286 29.0729 26.8008 26.3779 25.1012C23.6828 23.4017 20.5616 22.4998 17.3754 22.5ZM58.6254 22.5C57.7892 22.5 56.9867 22.6275 56.1879 22.7438C56.4467 21.8738 56.7129 20.9888 57.1404 20.1938C57.5679 19.0388 58.2354 18.0375 58.8992 17.0288C59.4542 15.9376 60.4329 15.1988 61.1529 14.265C61.9067 13.3575 62.9342 12.7538 63.7479 12C64.5467 11.2125 65.5929 10.8188 66.4254 10.2638C67.2954 9.76505 68.0529 9.2138 68.8629 8.9513L70.8842 8.1188L72.6617 7.38005L70.8429 0.112549L68.6042 0.652547C67.8879 0.832547 67.0142 1.04255 66.0204 1.2938C65.0042 1.4813 63.9204 1.99505 62.7129 2.4638C61.5242 3.00005 60.1404 3.3563 58.8579 4.21505C57.5679 5.03255 56.0792 5.71505 54.7667 6.81005C53.4954 7.9388 51.9617 8.91755 50.8292 10.35C49.5917 11.6925 48.3692 13.1025 47.4204 14.7075C46.3217 16.2375 45.5754 17.9175 44.7879 19.5788C44.0754 21.24 43.5017 22.9388 43.0329 24.5888C42.1442 27.8963 41.7467 31.0388 41.5929 33.7276C41.4654 36.4201 41.5404 38.6588 41.6979 40.2788C41.7542 41.0438 41.8592 41.7863 41.9342 42.3001L42.0279 42.93L42.1254 42.9076C42.7924 46.0232 44.3278 48.8863 46.554 51.1657C48.7803 53.4452 51.6063 55.0478 54.7053 55.7881C57.8043 56.5285 61.0496 56.3764 64.0658 55.3494C67.0819 54.3224 69.7457 52.4625 71.7489 49.9849C73.7522 47.5072 75.0131 44.513 75.3857 41.3487C75.7584 38.1843 75.2276 34.9791 73.8547 32.1039C72.4818 29.2286 70.3229 26.8008 67.6279 25.1012C64.9328 23.4017 61.8116 22.4998 58.6254 22.5Z" fill="#8EC682"/>
                         </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="article-links__box">
-                    <div class="article-links__mobile-overflow">
-                        <ul class="article-links__list">
-                            <li class="article-links__item">
-                                <a href="#"></a>
-                                <div class="article-links__item-text">
-                                    <div>
-                                        <span>Статья</span>
-                                        <span class="article-links__item-text-time">12 минут</span>
-                                    </div>
-                                    <p>Посадка садовых деревьев и кустарников</p>
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="20" cy="20" rx="20" ry="20" transform="rotate(180 20 20)" fill="white"/>
-                                        <path d="M18 16L22 20L18 24" stroke="#8EC682" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                                <img src="img/content/article-links-1.jpg" alt="Изображение">
-                                <p class="article-links__new article-links__new--active">Новое</p>
-                            </li>
-                            <li class="article-links__item">
-                                <a href="#"></a>
-                                <div class="article-links__item-text">
-                                    <div>
-                                        <span>Статья</span>
-                                        <span class="article-links__item-text-time">8 минут</span>
-                                    </div>
-                                    <p>Розы чайно-гибридные: посадка и уход</p>
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="20" cy="20" rx="20" ry="20" transform="rotate(180 20 20)" fill="white"/>
-                                        <path d="M18 16L22 20L18 24" stroke="#8EC682" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                                <img src="img/content/article-links-2.jpg" alt="Изображение">
-                                <p class="article-links__new">Новое</p>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-            </div>
 
+            </section>
         </div>
 
     </main>
@@ -1171,7 +723,21 @@
       </ul>
     </div>
 
+    <ul>
+        <li class="popap-qualification" id="popap-qualification-1">
+            <div>
+                <img src="img/content/about-qualification-1.jpg" alt="Изображение">
+            </div>
+        </li>
+        <li class="popap-qualification" id="popap-qualification-2">
+            <div>
+                <img src="img/content/about-qualification-2.jpg" alt="Изображение">
+            </div>
+        </li>
+    </ul>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 
