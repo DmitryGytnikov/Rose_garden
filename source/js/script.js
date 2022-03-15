@@ -167,5 +167,8 @@ $(function () {
     $(this).closest('.form-filters__checkbox-all').toggleClass('accordion--active');
   });
 
+  // Рэнджслайдеры на catalog.html
+$(".js-range-slider").ionRangeSlider();
+
 
 });
