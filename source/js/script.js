@@ -148,4 +148,24 @@ $(function () {
   });
 
 
+  // Аккордион "Категории" на catalog.html
+  $('.catalog__accordion-link').click(function(e) {
+
+    if($('.catalog__accordion').hasClass('accordion--one')) {
+      $('.catalog__accordion-link').not($(this)).removeClass('accordion--active');
+      $('.accordion__link-list').not($(this).next()).slideUp(300);
+    }
+
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+
+  });
+
+  // Выпадающее меню "Показать все" на catalog.html
+  $('.form-filters__accordion-item').click(function(e) {
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+
+    $(this).closest('.form-filters__checkbox-all').toggleClass('accordion--active');
+  });
+
+
 });
