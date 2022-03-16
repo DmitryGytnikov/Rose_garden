@@ -11,6 +11,71 @@ burger.addEventListener(`click`, function (evt) {
 });
 
 
+// Появление меню "Фильтры" (мобильная версия) на catalog.html
+let filtersButton = document.querySelector(`.catalog__filters-button`);
+let filtersMenu = document.querySelector(`.catalog__filters-inner`);
+let filtersButtonSubmit = document.querySelector(`.form-filters__submit-btn`);
+
+if (filtersButton && filtersMenu && filtersButtonSubmit) {
+  filtersButton.addEventListener(`click`, function (evt) {
+    evt.preventDefault();
+    filtersMenu.classList.toggle(`catalog__filters-inner--active`);
+  });
+
+  filtersButtonSubmit.addEventListener(`click`, function (evt) {
+    evt.preventDefault();
+    filtersMenu.classList.toggle(`catalog__filters-inner--active`);
+  });
+}
+
+
+//Ссылки "delivery__links" для прокручивания к нужному тегу на delivery.html
+let hiddenElement1 = document.getElementById("myElementToScroll-1");
+let btn1 = document.querySelector('.delivery__link-1');
+if (hiddenElement1 && btn1) {
+  function handleButtonClick1() {
+     hiddenElement1.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn1.addEventListener('click', handleButtonClick1);
+}
+
+let hiddenElement2 = document.getElementById("myElementToScroll-2");
+let btn2 = document.querySelector('.delivery__link-2');
+if (hiddenElement2 && btn2) {
+  function handleButtonClick2() {
+     hiddenElement2.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn2.addEventListener('click', handleButtonClick2);
+}
+
+let hiddenElement3 = document.getElementById("myElementToScroll-3");
+let btn3 = document.querySelector('.delivery__link-3');
+if (hiddenElement3 && btn3) {
+  function handleButtonClick3() {
+     hiddenElement3.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn3.addEventListener('click', handleButtonClick3);
+}
+
+let hiddenElement4 = document.getElementById("myElementToScroll-4");
+let btn4 = document.querySelector('.delivery__link-4');
+if (hiddenElement4 && btn4) {
+  function handleButtonClick4() {
+     hiddenElement4.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn4.addEventListener('click', handleButtonClick4);
+}
+
+let hiddenElement5 = document.getElementById("myElementToScroll-5");
+let btn5 = document.querySelector('.delivery__link-5');
+if (hiddenElement5 && btn5) {
+  function handleButtonClick5() {
+     hiddenElement5.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn5.addEventListener('click', handleButtonClick5);
+}
+
+
 $(function () {
 
   // Главный слайдер на main.html
@@ -160,6 +225,7 @@ $(function () {
 
   });
 
+
   // Выпадающее меню "Показать все" на catalog.html
   $('.form-filters__accordion-item').click(function(e) {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
@@ -167,8 +233,17 @@ $(function () {
     $(this).closest('.form-filters__checkbox-all').toggleClass('accordion--active');
   });
 
-  // Рэнджслайдеры на catalog.html
-$(".js-range-slider").ionRangeSlider();
+
+  // Табы ("Характеристики") на catalog-item-1.html
+  $('.tab-1').click(function(e) {
+    e.preventDefault();
+    $($(this).closest('.card__tab').find('li').find('.tab-1')).removeClass('tab--active-1');
+    $($(this).closest('.card__tab').find('.merchandise__content-wr').find('ul')).removeClass('tabs-content--active-1');
+
+    $(this).addClass('tab--active-1');
+    $($(this).attr('href')).addClass('tabs-content--active-1');
+  });
+
 
 
 });
