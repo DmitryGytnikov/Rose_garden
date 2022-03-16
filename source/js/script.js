@@ -34,7 +34,7 @@ let hiddenElement1 = document.getElementById("myElementToScroll-1");
 let btn1 = document.querySelector('.delivery__link-1');
 if (hiddenElement1 && btn1) {
   function handleButtonClick1() {
-     hiddenElement1.scrollIntoView({block: "start", behavior: "smooth"});
+    hiddenElement1.scrollIntoView({block: "start", behavior: "smooth"});
   }
   btn1.addEventListener('click', handleButtonClick1);
 }
@@ -43,7 +43,7 @@ let hiddenElement2 = document.getElementById("myElementToScroll-2");
 let btn2 = document.querySelector('.delivery__link-2');
 if (hiddenElement2 && btn2) {
   function handleButtonClick2() {
-     hiddenElement2.scrollIntoView({block: "start", behavior: "smooth"});
+    hiddenElement2.scrollIntoView({block: "start", behavior: "smooth"});
   }
   btn2.addEventListener('click', handleButtonClick2);
 }
@@ -52,7 +52,7 @@ let hiddenElement3 = document.getElementById("myElementToScroll-3");
 let btn3 = document.querySelector('.delivery__link-3');
 if (hiddenElement3 && btn3) {
   function handleButtonClick3() {
-     hiddenElement3.scrollIntoView({block: "start", behavior: "smooth"});
+    hiddenElement3.scrollIntoView({block: "start", behavior: "smooth"});
   }
   btn3.addEventListener('click', handleButtonClick3);
 }
@@ -61,7 +61,7 @@ let hiddenElement4 = document.getElementById("myElementToScroll-4");
 let btn4 = document.querySelector('.delivery__link-4');
 if (hiddenElement4 && btn4) {
   function handleButtonClick4() {
-     hiddenElement4.scrollIntoView({block: "start", behavior: "smooth"});
+    hiddenElement4.scrollIntoView({block: "start", behavior: "smooth"});
   }
   btn4.addEventListener('click', handleButtonClick4);
 }
@@ -70,9 +70,20 @@ let hiddenElement5 = document.getElementById("myElementToScroll-5");
 let btn5 = document.querySelector('.delivery__link-5');
 if (hiddenElement5 && btn5) {
   function handleButtonClick5() {
-     hiddenElement5.scrollIntoView({block: "start", behavior: "smooth"});
+    hiddenElement5.scrollIntoView({block: "start", behavior: "smooth"});
   }
   btn5.addEventListener('click', handleButtonClick5);
+}
+
+
+//Ссылка "Все характеристики"" для прокручивания к нужному тегу на catalog-item-1.html
+let hiddenElement6 = document.getElementById("myElementToScroll-6");
+let btn6 = document.querySelector('.info-link');
+if (hiddenElement6 && btn6) {
+  function handleButtonClick6() {
+    hiddenElement6.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+  btn6.addEventListener('click', handleButtonClick6);
 }
 
 
