@@ -256,5 +256,32 @@ $(function () {
   });
 
 
+// Большой слайдер презентации на card.html
+  $('.presentation__slider-big-catalog').slick({
+    dots: false,
+    fade: true,
+    arrows: false,
+    asNavFor: ".presentation__slider-small",
+
+    responsive: [{
+      breakpoint: 581,
+      settings: {
+        dots: true
+      }
+    }]
+  });
+
+
+// Маленький слайдер презентации на card.html
+  $('.presentation__slider-small').slick({
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: ".presentation__slider-big-catalog",
+    centerMode: true,
+    centerPadding: '0',
+    focusOnSelect: true
+  });
 
 });
