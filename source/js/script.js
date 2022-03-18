@@ -86,6 +86,13 @@ if (hiddenElement6 && btn6) {
   btn6.addEventListener('click', handleButtonClick6);
 }
 
+// Закрытие попапа fancybox по Esc
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    $.fancybox.close();
+  }
+});
+
 
 $(function () {
 
@@ -190,12 +197,12 @@ $(function () {
     $(this).closest('.product-card__basket-box').find('.product-card__preloader').addClass('product-card__preloader--active');
     var xxx = $(this);
 
-    // after 4 seconds
+    // after 0.7 seconds
       setTimeout(function(){
         // console.log(45);
         xxx.closest('.product-card__basket-box').find('.product-card__preloader').removeClass('product-card__preloader--active');
         xxx.closest('.product-card__basket-box').find('.product-card__basket-quantity').addClass('product-card__basket-quantity--active');
-      }, 1000);
+      }, 700);
 
   });
 
@@ -282,6 +289,31 @@ $(function () {
     centerMode: true,
     centerPadding: '0',
     focusOnSelect: true
+  });
+
+
+  // jQuery-плагин для установки курсора в определенной позиции pos (для mask):
+  $.fn.setCursorPosition = function(pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+  // Решение проблемы с кликом по центру(для mask):
+  $('.input-box__tel-input').click(function(){
+    $(this).setCursorPosition(3);
+    }).mask("+7(999) 999-99-99",{autoclear: false});
+
+
+// Закрытие попапа "Заявка отправлена" и "Ваша заказ оформлен"" по нажатию на кнопку "Хорошо"
+  $('.feedback-call__btn-ok').click(function(e) {
+    $.fancybox.close();
+    $.fancybox.close();
   });
 
 });

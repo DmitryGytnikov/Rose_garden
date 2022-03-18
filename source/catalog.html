@@ -7,6 +7,7 @@
   <title>Розовый сад</title>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/TTNorms-Light.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/TTNorms-Regular.woff2" as="font" crossorigin>
@@ -41,7 +42,7 @@
                                 <a href="tel:+79507704099">+7 (950) 770-40-99</a>
                                 <span>(с 8:00 до 22:00)</span>
                             </div>
-                            <button type="button">Заказать звонок</button>
+                            <button data-fancybox="" data-src="#popap-feedback-call" type="button">Заказать звонок</button>
                         </div>
                     </div>
                 </div>
@@ -119,9 +120,7 @@
 
                           </div>
                         </div>
-                        <button type="button">
-                          Заказать звонок
-                        </button>
+                        <button data-fancybox="" data-src="#popap-feedback-call" type="button">Заказать звонок</button>
                         <div class="header-burger-menu__box">
                             <div class="contacts-item contacts-item--tel">
                                 <div class="contacts-item__title">
@@ -1586,7 +1585,38 @@
       </ul>
     </div>
 
+    <div class="popap-feedback-call" id="popap-feedback-call">
+      <h4>Обратный звонок</h4>
+      <p>Заполните простую форму и мы с вами свяжемся в ближайшее время для уточнения информации.</p>
+      <form class="form-feedback-call" aria-label="Форма для обратной связи" method="post">
+        <div class="form-feedback-call__input-box">
+            <input class="input-box__name-input" aria-label="Фамилия, имя, отчество" type="text" name="name" placeholder="Ваше имя*" required>
+            <input class="input-box__tel-input input-bottom" aria-label="Номер телефона" type="tel" name="telephone-number" placeholder="Телефон*" required>
+        </div>
+        <div class="form-feedback-call__inner">
+            <p class="form-feedback-call__inner-text">
+                Нажимая кнопку «Отправить» я даю
+                <a class="form-feedback-call__inner-link" href="#" target="_blank">
+                    согласие
+                </a>
+                <a class="form-feedback-call__inner-link" href="#" target="_blank">
+                    на обработку моих персональных данных
+                </a>
+            </p>
+            <button class="form-feedback-call__inner-btn" type="submit">отправить</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popap-feedback-call" id="popap-feedback-application-sent">
+      <h4>Заявка отправлена</h4>
+      <p>В ближайшее время с вами свяжутся наши сотрудники для уточнения информации</p>
+      <button class="feedback-call__btn-ok">Хорошо</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/ion.rangeSlider.min.js"></script>
     <script src="js/scriptRangeSlider.js"></script>

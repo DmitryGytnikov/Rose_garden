@@ -5,6 +5,7 @@
   <meta name="viewport"
     content="width=device-width,initial-scale=1.0">
   <title>Розовый сад</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/TTNorms-Light.woff2" as="font" crossorigin>
@@ -20,11 +21,11 @@
                 <div class="container">
                     <div class="header-top__box">
                         <ul class="header-top__link">
-                            <li><a href="#">О питомнике</a></li>
-                            <li><a href="#">Прайс-лист</a></li>
-                            <li><a href="#">Статьи</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="about.html">О питомнике</a></li>
+                            <li><a href="article.html">Прайс-лист</a></li>
+                            <li><a href="articles.html">Статьи</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="delivery.html">Доставка и оплата</a></li>
                         </ul>
                         <div class="header-top__inner">
                             <div class="header-top__mail">
@@ -47,7 +48,7 @@
             </div>
             <div class="container">
                   <div class="header-middle">
-                      <a class="header-middle__logo" href="index.html" aria-label="На главную страницу" title="На главную">
+                      <a href="index.html" class="header-middle__logo" aria-label="На главную страницу" title="На главную">
                           <svg width="194" height="42" viewBox="0 0 194 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M23.0698 5.16514C23.9179 5.81811 24.7136 6.53543 25.4495 7.31061C24.5848 8.01479 23.7661 8.77264 22.9982 9.5796C22.254 8.79829 21.4624 8.0627 20.6277 7.37694C21.3811 6.57572 22.1986 5.83605 23.0721 5.16514H23.0698ZM23.0698 1C20.117 2.79775 17.5962 5.213 15.6836 8.07685C18.6092 9.85534 21.106 12.2475 22.9982 15.0851C24.9163 12.2135 27.4521 9.79829 30.4237 8.01281C28.5136 5.17523 26.0045 2.7825 23.0698 1V1Z" fill="#E45D6A"/>
                               <path d="M8.9998 11.2494C9.37604 11.3774 9.74765 11.5147 10.117 11.6656C10.9954 12.0288 11.8442 12.4586 12.656 12.9511C14.8665 14.2878 16.7524 16.0911 18.1794 18.2324C18.6724 18.9736 19.1098 19.7495 19.4882 20.554C20.8922 23.5272 21.4325 26.8292 21.0485 30.0897C20.8673 31.5989 20.4935 33.0792 19.936 34.495C17.6418 33.7304 15.5284 32.5118 13.7239 30.9132C11.9194 29.3146 10.4616 27.3694 9.43887 25.1955C8.41614 23.0216 7.84986 20.6644 7.77438 18.2671C7.6989 15.8697 8.11581 13.4822 8.9998 11.2494V11.2494ZM5.93915 4.74661C3.70132 8.09291 2.36789 11.9525 2.06654 15.9557C1.7652 19.959 2.50602 23.9719 4.21808 27.6102C5.93014 31.2484 8.5561 34.3902 11.8445 36.7347C15.1329 39.0792 18.9737 40.5478 22.9989 41L23.0197 40.968C25.0602 37.901 26.3486 34.4037 26.782 30.7553C27.294 26.4409 26.5801 22.0705 24.7208 18.1364C24.2227 17.079 23.6472 16.0592 22.9989 15.0851C21.104 12.2466 18.604 9.85432 15.6751 8.0769C14.6075 7.42734 13.49 6.86216 12.3328 6.38659C10.2891 5.54746 8.13706 4.99546 5.93915 4.74661V4.74661Z" fill="#E45D6A"/>
@@ -256,11 +257,10 @@
                               </li>
                           </ul>
 
-
                       </nav>
 
                       <ul class="header-middle__link">
-                          <li><a href="#">Розы</a></li>
+                          <li><a href="catalog.html">Розы</a></li>
                           <li><a href="#">Хвойные растения</a></li>
                           <li><a href="#">Плодовые деревья</a></li>
                           <li><a href="#">Ягодные кустарники</a></li>
@@ -314,188 +314,406 @@
                         <a href="#"><span>Главная</span></a>
                     </li>
                     <li class="breadcrumbs__list-item">
-                        <a><span>Статьи</span></a>
+                        <a><span>Корзина</span></a>
                     </li>
                 </ul>
             </div>
         </div>
 
-            <section class="articles">
-              <div class="container">
-                <h3 class="about__title">Статьи</h3>
+        <section class="clear-basket">
+            <div class="container">
 
-                <ul class="articles-list">
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new articles-item__lbl-new--active">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-1.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Какой питомник считать хорошим - 10 проверенных критериев</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-2.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Почему лучше покупать саженцы в питомнике</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new">Новое</div>
-                                <div class="articles-item__img">
-                                    <!-- <img src="img/content/articles-item-1.jpg" alt="Статья"> -->
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Посадка садовых деревьев и кустарников</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new articles-item__lbl-new--active">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-4.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Какой питомник считать хорошим - 10 проверенных критериев</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new articles-item__lbl-new--active">Новое</div>
-                                <div class="articles-item__img">
-                                    <!-- <img src="img/content/articles-item-1.jpg" alt="Статья"> -->
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Посадка садовых деревьев и кустарников</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-4.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Какой питомник считать хорошим - 10 проверенных критериев</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new articles-item__lbl-new--active">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-7.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Какой питомник считать хорошим - 10 проверенных критериев</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="articles-item">
-                        <a href="#">
-                            <div class="articles-item__img-wr">
-                                <div class="articles-item__lbl-new">Новое</div>
-                                <div class="articles-item__img">
-                                    <img src="img/content/articles-item-8.jpg" alt="Статья">
-                                </div>
-                                <img class="articles-item__img-bg" src="img/content/articles-item-bg.jpg" alt="Фон">
-                            </div>
-                            <div class="articles-item__text">
-                                <div>
-                                    <span>Статья</span>
-                                    <span class="articles-item__text-time">10 минут</span>
-                                </div>
-                                <p>Почему лучше покупать саженцы в питомнике</p>
-                                <span class="articles-item__text-date">29 января 2022</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <h3 class="about__title">Корзина</h3>
 
-                <button class="articles__button--desktop" type="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 6V9L16 5L12 1V4C7.58 4 4 7.58 4 12C4 13.57 4.46 15.03 5.24 16.26L6.7 14.8C6.25 13.97 6 13.01 6 12C6 8.69 8.69 6 12 6ZM18.76 7.74L17.3 9.2C17.74 10.04 18 10.99 18 12C18 15.31 15.31 18 12 18V15L8 19L12 23V20C16.42 20 20 16.42 20 12C20 10.43 19.54 8.97 18.76 7.74Z" fill="white"/>
-                    </svg>
-                    Еще 12 статей
-                </button>
+                <div class="clear-basket-inner">
+                    <div class="clear-basket-box">
+                        <p class="clear-basket-box-title">
+                            В корзине нет товаров
+                        </p>
+                        <p class="clear-basket-box-text">
+                            Загляните в каталог и найдите нужные вам товары или воспользуйтесь поиском
+                        </p>
+                        <a href="#">На главную</a>
+                    </div>
+                </div>
 
-                <button class="articles__button--mobile" type="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 6V9L16 5L12 1V4C7.58 4 4 7.58 4 12C4 13.57 4.46 15.03 5.24 16.26L6.7 14.8C6.25 13.97 6 13.01 6 12C6 8.69 8.69 6 12 6ZM18.76 7.74L17.3 9.2C17.74 10.04 18 10.99 18 12C18 15.31 15.31 18 12 18V15L8 19L12 23V20C16.42 20 20 16.42 20 12C20 10.43 19.54 8.97 18.76 7.74Z" fill="white"/>
-                    </svg>
-                    Еще 3 статьи
-                </button>
+            </div>
+        </section>
 
-              </div>
+        <div class="popular-categories popular-categories--clear-basket">
+            <div class="container">
+                <p class="popular-categories__title">Популярные категории</p>
+                <div class="popular-categories__inner">
+                    <div class="popular-categories__mobile-overflow">
+                        <div class="popular-categories__list">
+                            <a class="popular-categories__slider-item">
+                                <div class="popular-categories__img">
+                                    <img src="img/content/popular-categories-1.png" alt="Товар">
+                                </div>
+                                <p>Плодовые деревья</p>
+                            </a>
+                            <a class="popular-categories__slider-item">
+                                <div class="popular-categories__img">
+                                    <img src="img/content/popular-categories-2.png" alt="Товар">
+                                </div>
+                                <p>Хвойные растения</p>
+                            </a>
+                            <a class="popular-categories__slider-item">
+                                <div class="popular-categories__img">
+                                    <img src="img/content/popular-categories-3.png" alt="Товар">
+                                </div>
+                                <p>Ягодные кустарники</p>
+                            </a>
+                            <a class="popular-categories__slider-item">
+                                <div class="popular-categories__img">
+                                    <img src="img/content/popular-categories-4.png" alt="Товар">
+                                </div>
+                                <p>Декоративные кустарники</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            </section>
+        <div class="container">
+          <div>
+            <h3 class="also-title">Каталог растений</h3>
+
+            <ul class="product-card-slider">
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-1.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Английские розы</p>
+                            <h4 class="product-card__title">Абрахам дерби</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>27 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-2.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>11 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new product-card__price-new--active">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old product-card__price-old--active">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new product-card__lbl-new--active">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-3.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Аник роуз</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>56 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-4.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Флорибунда</p>
+                            <h4 class="product-card__title">Блю фор ю</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>13 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-1.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Английские розы</p>
+                            <h4 class="product-card__title">Абрахам дерби</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>27 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-2.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>11 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new product-card__price-new--active">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old product-card__price-old--active">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+          </div>
+        </div>
 
     </main>
 
@@ -777,6 +995,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>

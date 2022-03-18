@@ -41,7 +41,7 @@
                                 <a href="tel:+79507704099">+7 (950) 770-40-99</a>
                                 <span>(с 8:00 до 22:00)</span>
                             </div>
-                            <button type="button">Заказать звонок</button>
+                            <button data-fancybox="" data-src="#popap-feedback-call" type="button">Заказать звонок</button>
                         </div>
                     </div>
                 </div>
@@ -119,9 +119,7 @@
 
                           </div>
                         </div>
-                        <button type="button">
-                          Заказать звонок
-                        </button>
+                        <button data-fancybox="" data-src="#popap-feedback-call" type="button">Заказать звонок</button>
                         <div class="header-burger-menu__box">
                             <div class="contacts-item contacts-item--tel">
                                 <div class="contacts-item__title">
@@ -329,15 +327,16 @@
 
                 <div class="basket__inner">
                     <div class="basket__box">
-                      <!--
+
                         <div class="explanation">
+                          <p></p>
                           <p>Наименование</p>
                           <p>Цена за шт.</p>
                           <p>Кол-во</p>
                           <p>Итог</p>
                           <p></p>
                         </div>
- -->
+
                         <ul class="basket__list">
                           <li class="basket__item">
                             <div class="basket__img">
@@ -449,7 +448,7 @@
                           </li>
                         </ul>
                     </div>
-<!--
+
                     <div class="total">
                         <h4 class="total__title">Ваш заказ</h4>
                         <div class="total__box">
@@ -477,17 +476,386 @@
                         </div>
                         <button type="button">оформить заказ</button>
                     </div>
- -->
+
+                </div>
+
+                <div class="basket__delete basket__delete--active">
+                    <div class="basket__delete-text-wr">
+                        Вы удалили товар
+                        <span class="basket__delet-product">
+                            Двойное Удовольствие / Double Delight
+                        </span>
+                        из корзины
+                    </div>
+                    <div class="basket__delete-box">
+                        <button type="button">Восстановить</button>
+                        <div class="basket__delete-load">
+                            <div class="timer">
+                                <div class="timer__line">
+
+                                </div>
+                                <div class="timer__body">
+                                    <div class="timer__counter">
+                                        <span>10</span>
+                                        <span>9</span>
+                                        <span>8</span>
+                                        <span>7</span>
+                                        <span>6</span>
+                                        <span>5</span>
+                                        <span>4</span>
+                                        <span>3</span>
+                                        <span>2</span>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
         </section>
 
+        <div class="container">
+          <div>
+            <h3 class="also-title">Часто покупают с товарами из вашей корзины</h3>
 
-
-
-
+            <ul class="product-card-slider">
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-1.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Английские розы</p>
+                            <h4 class="product-card__title">Абрахам дерби</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>27 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-2.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>11 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new product-card__price-new--active">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old product-card__price-old--active">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new product-card__lbl-new--active">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-3.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Аник роуз</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>56 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-4.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Флорибунда</p>
+                            <h4 class="product-card__title">Блю фор ю</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>13 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-1.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Английские розы</p>
+                            <h4 class="product-card__title">Абрахам дерби</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>27 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price product-card__price--active">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <a href="#">
+                        <div class="product-card__img-wr">
+                            <div class="product-card__lbls">
+                                <div class="product-card__lbl product-card__lbl-discount product-card__lbl-discount--active">Скидка</div>
+                                <div class="product-card__lbl product-card__lbl-new">Новое</div>
+                            </div>
+                            <div class="product-card__img">
+                                <img src="img/content/product-item-2.jpg" alt="Товар">
+                            </div>
+                        </div>
+                        <div class="product-card__info">
+                            <p class="product-card__group">Чайно-гибридные</p>
+                            <h4 class="product-card__title">Двойное Удовольствие / Double Delight</h4>
+                            <p class="product-card__wholesale">Оптовая поставка от 10 шт.</p>
+                            <p class="product-card__in-stock">
+                                В наличии:
+                                <span>11 шт.</span>
+                            </p>
+                            <div class="product-card__inner">
+                                <div class="product-card__price-wr">
+                                    <div class="product-card__price-new product-card__price-new--active">
+                                        480 ₽
+                                    </div>
+                                    <div class="product-card__price-old product-card__price-old--active">
+                                        600 ₽
+                                    </div>
+                                    <div class="product-card__price">
+                                        200 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-card__basket-box">
+                        <button class="product-card__basket" type="button">В корзину</button>
+                        <div class="product-card__preloader">
+                            <div class="preloader-5"></div>
+                        </div>
+                        <div class="product-card__basket-quantity">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                            <input type="text" name="product-card__basket-quantity" value="3" aria-label="Количество" placeholder="3">
+                            <div class="product-card__sign" tabindex="0">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="5.5" width="11" height="1" fill="#303030" stroke="#303030"/>
+                                    <rect x="6.5" y="0.5" width="11" height="1" transform="rotate(90 6.5 0.5)" fill="#303030" stroke="#303030"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+          </div>
+        </div>
 
     </main>
 
@@ -737,8 +1105,38 @@
       </ul>
     </div>
 
+    <div class="popap-feedback-call" id="popap-feedback-call">
+      <h4>Обратный звонок</h4>
+      <p>Заполните простую форму и мы с вами свяжемся в ближайшее время для уточнения информации.</p>
+      <form class="form-feedback-call" aria-label="Форма для обратной связи" method="post">
+        <div class="form-feedback-call__input-box">
+            <input class="input-box__name-input" aria-label="Фамилия, имя, отчество" type="text" name="name" placeholder="Ваше имя*" required>
+            <input class="input-box__tel-input input-bottom" aria-label="Номер телефона" type="tel" name="telephone-number" placeholder="Телефон*" required>
+        </div>
+        <div class="form-feedback-call__inner">
+            <p class="form-feedback-call__inner-text">
+                Нажимая кнопку «Отправить» я даю
+                <a class="form-feedback-call__inner-link" href="#" target="_blank">
+                    согласие
+                </a>
+                <a class="form-feedback-call__inner-link" href="#" target="_blank">
+                    на обработку моих персональных данных
+                </a>
+            </p>
+            <button class="form-feedback-call__inner-btn" type="submit">отправить</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="popap-feedback-call" id="popap-feedback-application-sent">
+      <h4>Заявка отправлена</h4>
+      <p>В ближайшее время с вами свяжутся наши сотрудники для уточнения информации</p>
+      <button class="feedback-call__btn-ok">Хорошо</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 
