@@ -1,6 +1,9 @@
-$(function () {
+var $jq = jQuery.noConflict();
+
+$jq(document).ready(function() {
+// $(function () {
 
   // Рэнджслайдеры на catalog.html
-    $(".js-range-slider").ionRangeSlider();
+    $jq(".js-range-slider").ionRangeSlider();
 
 });

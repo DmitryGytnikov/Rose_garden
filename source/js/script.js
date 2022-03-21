@@ -86,18 +86,24 @@ if (hiddenElement6 && btn6) {
   btn6.addEventListener('click', handleButtonClick6);
 }
 
+
+// jQuery : How To Fix the “$ is not a function” Error Using noConflict
+  var $jq = jQuery.noConflict();
+
+
 // Закрытие попапа fancybox по Esc
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    $.fancybox.close();
+    // $.fancybox.close();
+    $jq.fancybox.close();
   }
 });
 
-
-$(function () {
+// jQuery : How To Fix the “$ is not a function” Error Using noConflict
+$jq(document).ready(function() {
 
   // Главный слайдер на main.html
-  $('.presentation__slider-big').slick({
+  $jq('.presentation__slider-big').slick({
     dots: true,
     fade: true,
     autoplay: true,
@@ -108,7 +114,7 @@ $(function () {
 
 
   // Cлайдер main__about-slider на main.html
-  $('.main__about-slider').slick({
+  $jq('.main__about-slider').slick({
     dots: true,
     fade: true,
     autoplay: true,
@@ -119,7 +125,7 @@ $(function () {
 
 
   // Cлайдер product-card-slider на main.html
-  $('.product-card-slider').slick({
+  $jq('.product-card-slider').slick({
     dots: false,
     arrows: true,
     slidesToShow: 4,
@@ -148,7 +154,7 @@ $(function () {
 
 
   // Cлайдер main__about-slider на main.html
-  $('.about__qualification-slider').slick({
+  $jq('.about__qualification-slider').slick({
     dots: false,
     slidesToShow: 1,
     slidesToShow: 2,
@@ -164,107 +170,8 @@ $(function () {
   });
 
 
-  // Фильтр на main.html
-  $('.main-filters__button').click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass('main-filters__button--active');
-    $('.main-filters__button').not($(this)).removeClass('main-filters__button--active');
-  });
-
-
-  // Выпадающее меню "Фильтр" на main.html
-  $('.main-filters__options-current').click(function(e) {
-    e.preventDefault();
-
-    $(this).toggleClass('accordion--active').next().slideToggle(300);
-  });
-  $('.main-filters__option').click(function(e) {
-    e.preventDefault();
-    $('.main-filters__options-current').removeClass('accordion--active');
-    $(this).closest('.main-filters__options-list').slideUp(300);
-
-    var text_search = $(this).text();
-    //console.log(text_search);
-    $('.main-filters__options-current').text(text_search);
-  });
-
-
-  // Прелоадер на карточке товара
-  $('.product-card__basket').click(function(e) {
-    e.preventDefault();
-
-    $(this).toggleClass('product-card__basket--hidden');
-    $(this).closest('.product-card__basket-box').find('.product-card__preloader').addClass('product-card__preloader--active');
-    var xxx = $(this);
-
-    // after 0.7 seconds
-      setTimeout(function(){
-        // console.log(45);
-        xxx.closest('.product-card__basket-box').find('.product-card__preloader').removeClass('product-card__preloader--active');
-        xxx.closest('.product-card__basket-box').find('.product-card__basket-quantity').addClass('product-card__basket-quantity--active');
-      }, 700);
-
-  });
-
-
-  // Фильтр на catalog.html
-  $('.catalog__box-button').click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass('catalog__box-button--active');
-    $('.catalog__box-button').not($(this)).removeClass('catalog__box-button--active');
-  });
-
-
-  // Выпадающее меню сортировки на catalog.html
-  $('.catalog__box-sort-current').click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass('accordion--active').next().slideToggle(300);
-  });
-  $('.catalog__box-sort-option').click(function(e) {
-    e.preventDefault();
-    $('.catalog__box-sort-current').removeClass('accordion--active');
-    $(this).closest('.catalog__box-sort-list').slideUp(300);
-
-    var text_search = $(this).text();
-    //console.log(text_search);
-    $('.catalog__box-sort-current').text(text_search);
-  });
-
-
-  // Аккордион "Категории" на catalog.html
-  $('.catalog__accordion-link').click(function(e) {
-
-    if($('.catalog__accordion').hasClass('accordion--one')) {
-      $('.catalog__accordion-link').not($(this)).removeClass('accordion--active');
-      $('.accordion__link-list').not($(this).next()).slideUp(300);
-    }
-
-    $(this).toggleClass('accordion--active').next().slideToggle(300);
-
-  });
-
-
-  // Выпадающее меню "Показать все" на catalog.html
-  $('.form-filters__accordion-item').click(function(e) {
-    $(this).toggleClass('accordion--active').next().slideToggle(300);
-
-    $(this).closest('.form-filters__checkbox-all').toggleClass('accordion--active');
-  });
-
-
-  // Табы ("Характеристики") на catalog-item-1.html
-  $('.tab-1').click(function(e) {
-    e.preventDefault();
-    $($(this).closest('.card__tab').find('li').find('.tab-1')).removeClass('tab--active-1');
-    $($(this).closest('.card__tab').find('.merchandise__content-wr').find('ul')).removeClass('tabs-content--active-1');
-
-    $(this).addClass('tab--active-1');
-    $($(this).attr('href')).addClass('tabs-content--active-1');
-  });
-
-
 // Большой слайдер презентации на card.html
-  $('.presentation__slider-big-catalog').slick({
+  $jq('.presentation__slider-big-catalog').slick({
     dots: false,
     fade: true,
     arrows: false,
@@ -280,7 +187,7 @@ $(function () {
 
 
 // Маленький слайдер презентации на card.html
-  $('.presentation__slider-small').slick({
+  $jq('.presentation__slider-small').slick({
     dots: false,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -291,13 +198,119 @@ $(function () {
     focusOnSelect: true
   });
 
+});
+
+
+// $(function () {
+$jq(document).ready(function() {
+
+  // Фильтр на main.html
+  $jq('.main-filters__button').click(function(e) {
+    e.preventDefault();
+    $jq(this).toggleClass('main-filters__button--active');
+    $jq('.main-filters__button').not($jq(this)).removeClass('main-filters__button--active');
+  });
+
+
+  // Выпадающее меню "Фильтр" на main.html
+  $jq('.main-filters__options-current').click(function(e) {
+    e.preventDefault();
+
+    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $jq('.main-filters__option').click(function(e) {
+    e.preventDefault();
+    $jq('.main-filters__options-current').removeClass('accordion--active');
+    $jq(this).closest('.main-filters__options-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $jq('.main-filters__options-current').text(text_search);
+  });
+
+
+  // Прелоадер на карточке товара
+  $jq('.product-card__basket').click(function(e) {
+    e.preventDefault();
+
+    $jq(this).toggleClass('product-card__basket--hidden');
+    $jq(this).closest('.product-card__basket-box').find('.product-card__preloader').addClass('product-card__preloader--active');
+    var xxx = $jq(this);
+
+    // after 0.7 seconds
+      setTimeout(function(){
+        // console.log(45);
+        xxx.closest('.product-card__basket-box').find('.product-card__preloader').removeClass('product-card__preloader--active');
+        xxx.closest('.product-card__basket-box').find('.product-card__basket-quantity').addClass('product-card__basket-quantity--active');
+      }, 700);
+
+  });
+
+
+  // Фильтр на catalog.html
+  $jq('.catalog__box-button').click(function(e) {
+    e.preventDefault();
+    $jq(this).toggleClass('catalog__box-button--active');
+    $jq('.catalog__box-button').not($jq(this)).removeClass('catalog__box-button--active');
+  });
+
+
+  // Выпадающее меню сортировки на catalog.html
+  $jq('.catalog__box-sort-current').click(function(e) {
+    e.preventDefault();
+    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $jq('.catalog__box-sort-option').click(function(e) {
+    e.preventDefault();
+    $jq('.catalog__box-sort-current').removeClass('accordion--active');
+    $jq(this).closest('.catalog__box-sort-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $jq('.catalog__box-sort-current').text(text_search);
+  });
+
+
+  // Аккордион "Категории" на catalog.html
+  $jq('.catalog__accordion-link').click(function(e) {
+
+    if($jq('.catalog__accordion').hasClass('accordion--one')) {
+      $jq('.catalog__accordion-link').not($jq(this)).removeClass('accordion--active');
+      $jq('.accordion__link-list').not($jq(this).next()).slideUp(300);
+    }
+
+    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
+
+  });
+
+
+  // Выпадающее меню "Показать все" на catalog.html
+  $jq('.form-filters__accordion-item').click(function(e) {
+    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
+
+    $jq(this).closest('.form-filters__checkbox-all').toggleClass('accordion--active');
+  });
+
+
+  // Табы ("Характеристики") на catalog-item-1.html
+  $jq('.tab-1').click(function(e) {
+    e.preventDefault();
+    $jq($jq(this).closest('.card__tab').find('li').find('.tab-1')).removeClass('tab--active-1');
+    $jq($jq(this).closest('.card__tab').find('.merchandise__content-wr').find('ul')).removeClass('tabs-content--active-1');
+
+    $jq(this).addClass('tab--active-1');
+    $jq($jq(this).attr('href')).addClass('tabs-content--active-1');
+  });
+
+
+
 
   // jQuery-плагин для установки курсора в определенной позиции pos (для mask):
-  $.fn.setCursorPosition = function(pos) {
-    if ($(this).get(0).setSelectionRange) {
-      $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-      var range = $(this).get(0).createTextRange();
+  $jq.fn.setCursorPosition = function(pos) {
+    if ($jq(this).get(0).setSelectionRange) {
+      $jq(this).get(0).setSelectionRange(pos, pos);
+    } else if ($jq(this).get(0).createTextRange) {
+      var range = $jq(this).get(0).createTextRange();
       range.collapse(true);
       range.moveEnd('character', pos);
       range.moveStart('character', pos);
@@ -305,15 +318,22 @@ $(function () {
     }
   };
   // Решение проблемы с кликом по центру(для mask):
-  $('.input-box__tel-input').click(function(){
-    $(this).setCursorPosition(3);
+  $jq('.input-box__tel-input').click(function(){
+    $jq(this).setCursorPosition(3);
     }).mask("+7(999) 999-99-99",{autoclear: false});
 
 
 // Закрытие попапа "Заявка отправлена" и "Ваша заказ оформлен"" по нажатию на кнопку "Хорошо"
-  $('.feedback-call__btn-ok').click(function(e) {
-    $.fancybox.close();
-    $.fancybox.close();
+  $jq('.feedback-call__btn-ok').click(function(e) {
+    $jq.fancybox.close();
+    $jq.fancybox.close();
+  });
+
+
+  // Выпадающий текст "Подробнее о заказе"" на попапе catalog.html
+  $jq('.popap__accordion-link').click(function(e) {
+    e.preventDefault();
+    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
   });
 
 });
