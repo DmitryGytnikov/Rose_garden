@@ -130,25 +130,41 @@ $jq(document).ready(function() {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // margin: 20,
+    // prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btnprev"><img src="img/arrow-left-slider-big-1.svg"></button>',
+    // nextArrow: '<button class="banner-section__slider-btn banner-section__slider-btnnext"><img src="img/arrow-right-slider-big-1.svg"></button>',
+    prevArrow: $jq('.main-filters__button-slider--left'),
+    nextArrow: $jq('.main-filters__button-slider--right'),
+
+    margin: 20,
     responsive: [{
       breakpoint: 1600,
       settings: {
         slidesToShow: 3
       }
     }, {
-      breakpoint: 835,
+      breakpoint: 1090,
       settings: {
         slidesToShow: 2
       }
     }, {
-      breakpoint: 575,
+      breakpoint: 740,
       settings: {
         slidesToShow: 1,
-        // centerMode: true,
+        // variableWidth: true,
+        centerMode: true,
         // centerPadding: '25px',
         // margin: 0,
       }
+    }, {
+      breakpoint: 464,
+      settings: {
+        slidesToShow: 1,
+        // variableWidth: true,
+        centerMode: false,
+        // centerPadding: '25px',
+        // margin: 0,
+      }
+
     }]
   });
 
@@ -223,7 +239,7 @@ $jq(document).ready(function() {
     $jq('.main-filters__options-current').removeClass('accordion--active');
     $jq(this).closest('.main-filters__options-list').slideUp(300);
 
-    var text_search = $(this).text();
+    var text_search = $jq(this).text();
     //console.log(text_search);
     $jq('.main-filters__options-current').text(text_search);
   });

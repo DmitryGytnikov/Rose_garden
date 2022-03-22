@@ -78,10 +78,10 @@ ul {
   min-width: 320px; // появляется нижняя прокрутка
 
   // Липкий подвал
-  height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  // height: 100%;
+  // display: grid;
+  // grid-template-rows: min-content 1fr min-content;
+  // align-content: start;
 
   // @media (max-width: 760px) {
   //   // overflow: hidden; //Запрет скролла при открытом меню
@@ -1049,6 +1049,8 @@ ul {
   height: 78px;
   padding-top: 26px;
   background: #f9f9f9;
+  border-top: 1px solid #efefef;
+
 }
 
 .header-bottom--light {
@@ -1267,6 +1269,14 @@ ul {
       margin-bottom: 86px;
       margin-left: auto;
       margin-right: auto;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: #e45d6a;
+      }
     }
   }
 }
@@ -1299,6 +1309,13 @@ ul {
     line-height: 21px;
     color: #595959;
     padding: 11px 0;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--basic-hover);
+    }
   }
 }
 
@@ -1370,6 +1387,16 @@ ul {
   justify-content: center;
   position: relative;
   transition: all 0.2s ease;
+
+  & path {
+    transition: all 0.2s ease;
+  }
+
+  &:hover path,
+  &:focus path,
+  &:active path {
+    fill: #e45d6a;
+  }
 }
 
 .menu-mobile__item span {
@@ -1415,7 +1442,7 @@ ul {
   position: relative;// Настройка слайдера
 
   @media (max-width: 970px) {
-    // height: 200px;
+    height: 200px;
   }
 
   & .slick-arrow {// Настройка слайдера
@@ -1427,6 +1454,10 @@ ul {
     height: 52px;
     margin-top: -26px;
     cursor: pointer;
+
+    @include mobile {
+      display: none !important;
+    }
   }
 
   & .slick-prev.slick-arrow {// Настройка слайдера
@@ -1661,8 +1692,8 @@ ul {
 .article-links__box,
 .popular-categories__inner {
   overflow-x: scroll;
-  // scrollbar-color: #2f8fff #4e4e4e17;
-  scrollbar-color: #f9f9f9 #4e4e4e17;
+  scrollbar-color: #2f8fff #4e4e4e17;
+  // scrollbar-color: #f9f9f9 #4e4e4e17;
   scrollbar-width: thin;
 }
 
@@ -1792,6 +1823,11 @@ ul {
   background: #ffffff;
   padding-bottom: 100px;
   padding-top: 100px;
+
+  @media (max-width: 1100px) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
 }
 
 .main__about-inner {
@@ -1960,7 +1996,7 @@ ul {
     cursor: pointer;
 
     @media (max-width: 750px) {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -2074,6 +2110,11 @@ ul {
 .article-links {
   padding-top: 100px;
   padding-bottom: 110px;
+
+  @media (max-width: 700px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .article-links__inner {
@@ -2325,16 +2366,21 @@ ul {
 
 .main-filters {
   margin-top: 65px;
+
+  @media (max-width: 1100px) {
+    margin-top: 30px;
+  }
 }
 
 .main-filters__box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   // margin-bottom: 45px;
-  position: relative;
-  top: 50px;
-  z-index: 5;
+  // position: relative;
+  // top: 50px;
+  // z-index: 5;
 }
 
 .main-filters__title {
@@ -2344,20 +2390,29 @@ ul {
   color: #303030;
   margin-right: 77px;
 
-  @media (max-width: 914px) {
+  @media (max-width: 1040px) {
     margin-bottom: 25px;
+    width: 100%;
   }
+
+  // @media (max-width: 914px) {
+  //   margin-bottom: 25px;
+  // }
 
   @include mobile {
     font-size: 22px;
     line-height: 33px;
     margin-right: 24px;
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   @media (max-width: 350px) {
     margin-right: 75px;
   }
+}
+
+.main-filters__title--catalig-item {
+  width: auto;
 }
 
 .main-filters__buttons {
@@ -2413,11 +2468,13 @@ ul {
 }
 
 .main-filters__options-current {
+  text-align-last: left;
+  width: 120px;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   color: #8ec682;
-  padding: 5px 15px 5px 0;
+  padding: 5px 15px 5px 10px;
   background: #ffffff;
   outline: none;
   cursor: pointer;
@@ -2428,7 +2485,7 @@ ul {
   &::before {
     content: "";
     position: absolute;
-    right: -1px;
+    right: 7px;
     top: 43%;
     background-image: url("../img/mark-1.svg");
     background-repeat: no-repeat;
@@ -2454,18 +2511,71 @@ ul {
 }
 
 .main-filters__option {
+  text-align-last: left;
+  width: 120px;
+  background: #ffffff;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  color: #8ec682;
-  padding: 5px 15px 5px 0;
-  background: #ffffff;
+  color: #303030;
+  padding: 5px 15px 5px 10px;
   outline: none;
   cursor: pointer;
   position: relative;
   z-index: 11;
   transition: all 0.2s ease;
   margin-right: 11px;
+}
+
+.main-filters__buttons-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 116px;
+  height: 55px;
+  margin-left: auto;
+
+  @include mobile {
+    display: none;
+  }
+
+  & > button {
+    // top: 5%;
+    // z-index: 10;
+    // font-size: 0;
+    width: 52px;
+    height: 52px;
+    // margin-top: -26px;
+    cursor: pointer;
+    background: transparent;
+
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  & .main-filters__button-slider--left {
+    // background: url("../img/arrow-left-slider-big-1.svg") 0 0 / 100% no-repeat;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  & .main-filters__button-slider--right {
+    // right: 12px;
+    // background: url("../img/arrow-right-slider-big-1.svg") 0 0 / 100% no-repeat;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.05);
+    }
+  }
 }
 
 // main-filters^^^
@@ -2478,47 +2588,12 @@ ul {
   overflow: hidden;
   min-width: 0;
   height: 100%;
-  padding-top: 97px;
+  padding-top: 45px;
   padding-bottom: 100px;
   width: 100%;
 
-  & .slick-arrow {// Настройка слайдера
-    position: absolute;
-    top: 5%;
-    z-index: 10;
-    font-size: 0;
-    width: 52px;
-    height: 52px;
-    margin-top: -26px;
-    cursor: pointer;
-
-    @media (max-width: 750px) {
-      display: none;
-    }
-  }
-
-  & .slick-prev.slick-arrow {// Настройка слайдера
-    right: 79px;
-    background: url("../img/arrow-left-slider-big-1.svg") 0 0 / 100% no-repeat;
-    transition: all 0.2s ease;
-
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.05);
-    }
-  }
-
-  & .slick-next.slick-arrow {// Настройка слайдера
-    right: 12px;
-    background: url("../img/arrow-right-slider-big-1.svg") 0 0 / 100% no-repeat;
-    transition: all 0.2s ease;
-
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.05);
-    }
+  @media (max-width: 1100px) {
+    padding-bottom: 30px;
   }
 
   & .slick-list {// Настройка слайдера
@@ -2543,10 +2618,12 @@ ul {
 }
 
 .product-card {
-  margin-right: 44px;
-  margin-left: -14px;
+  height: 100%;
+  // margin-right: 44px;
+  // margin-left: -14px;
   max-width: none;
-  width: 334px !important;
+  // width: 334px !important;
+  width: 334px;
   min-height: 434px !important;
   border: 1px solid transparent;
   // border: 1px solid red;
@@ -2565,6 +2642,7 @@ ul {
 }
 
 .product-card a {
+  border-radius: 25px 25px 25px 25px;
   width: 334px;
   min-height: 434px !important;
   padding-bottom: 30px;
@@ -2577,7 +2655,7 @@ ul {
   &:hover,
   &:focus,
   &:active {
-    background: #e5e5e5;
+    background: #fceff0;
   }
 }
 
@@ -2921,9 +2999,14 @@ ul {
 
 .product-card__basket-box {
   position: absolute;
-  right: 30px;
+  // right: 30px;
+  left: 158px;
   bottom: 30px;
   z-index: 10;
+
+  @media (max-width: 360px) {
+    left: 142px;
+  }
 }
 
 // product-card-slider^^^
@@ -4019,7 +4102,7 @@ ul {
     }
 
     &:hover {
-      background: #f9f9f9;
+      background: #e5e5e5;
     }
 
     &:hover .articles-item__text p {
@@ -4154,7 +4237,7 @@ ul {
     left: 184px;
 
     width: 40px;
-    height: 220px;
+    height: 160px;
     flex-direction: column;
 
     @media (max-width: 1340px) {
@@ -4994,6 +5077,13 @@ ul {
 
   @include mobile {
     display: flex;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #e45d6a;
+    }
   }
 }
 
@@ -5144,6 +5234,13 @@ ul {
     justify-content: center;
     cursor: pointer;
     margin: 0 auto;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #e45d6a;
+    }
 
     & svg {
       width: 18px;
@@ -5440,7 +5537,7 @@ ul {
 
   @media (max-width: 1200px) {
     margin-bottom: 0;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 }
 
@@ -5509,6 +5606,10 @@ ul {
   background: #ffffff;
   border-radius: 25px;
   padding: 35px 45px 40px 45px;
+
+  @media (max-width: 837px) {
+    margin-top: 30px;
+  }
 
   @media (max-width: 390px) {
     width: 100%;
@@ -5864,6 +5965,7 @@ ul {
   height: 100%;
 
   & img {
+    width: 100%;
     object-fit: cover;
     height: 100%;
     object-position: center;
@@ -5872,6 +5974,10 @@ ul {
 
 .popap-presentation {
   display: none;
+
+  & img {
+    width: 100%;
+  }
 }
 
 
@@ -7018,7 +7124,6 @@ ul {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -7051,4 +7156,46 @@ ul {
   margin-right: 55px;
 }
 
+.also-title--merchandise {
+  margin-top: 100px;
+
+  @include mobile {
+    margin-top: 30px;
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
 // Попапы^^^
+
+
+
+
+
+// Экспериментапльный слайдер
+
+.banner-section__slider-img {
+  object-fit: cover;
+  min-height: 500px;
+  display: inline;
+  width: auto;
+
+}
+
+// .banner-section__slider-wr {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr;
+
+//   height: 500px;
+
+// }
+
+.banner-section__slider {
+  max-width: 1440px;
+}
+
+
+
+
+// Экспериментапльный слайдер^^^
