@@ -110,6 +110,8 @@ $jq(document).ready(function() {
     autoplaySpeed: 4000,
     slidesToShow: 1,
     // variableWidth: true,
+    prevArrow: $jq('.presentation__button-slider--left'),
+    nextArrow: $jq('.presentation__button-slider--right'),
   });
 
 
@@ -121,6 +123,8 @@ $jq(document).ready(function() {
     autoplaySpeed: 4000,
     slidesToShow: 1,
     // variableWidth: true,
+    prevArrow: $jq('.presentation__button-slider--left-1'),
+    nextArrow: $jq('.presentation__button-slider--right-1'),
   });
 
 
@@ -135,32 +139,43 @@ $jq(document).ready(function() {
     prevArrow: $jq('.main-filters__button-slider--left'),
     nextArrow: $jq('.main-filters__button-slider--right'),
 
-    margin: 20,
+    // margin: 140,
+    // padding: 100,
     responsive: [{
-      breakpoint: 1600,
+      breakpoint: 1377,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 3,
       }
     }, {
       breakpoint: 1090,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 2,
       }
     }, {
       breakpoint: 740,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         // variableWidth: true,
-        centerMode: true,
+        // centerMode: true,
         // centerPadding: '25px',
         // margin: 0,
       }
     }, {
-      breakpoint: 464,
+      breakpoint: 661,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         // variableWidth: true,
         centerMode: false,
+        // centerPadding: '25px',
+        // margin: 0,
+      }
+    }, {
+      breakpoint: 496,
+      settings: {
+        slidesToShow: 3,
+        // variableWidth: true,
+        centerMode: false,
+        // centerMode: true,
         // centerPadding: '25px',
         // margin: 0,
       }
@@ -175,6 +190,8 @@ $jq(document).ready(function() {
     slidesToShow: 1,
     slidesToShow: 2,
     slidesToScroll: 1,
+    prevArrow: $jq('.presentation__button-slider--left-2'),
+    nextArrow: $jq('.presentation__button-slider--right-2'),
 
     responsive: [{
       breakpoint: 760,
@@ -209,8 +226,8 @@ $jq(document).ready(function() {
     slidesToScroll: 1,
     arrows: false,
     asNavFor: ".presentation__slider-big-catalog",
-    centerMode: true,
-    centerPadding: '0',
+    // centerMode: true,
+    // centerPadding: '0',
     focusOnSelect: true
   });
 
@@ -291,14 +308,40 @@ $jq(document).ready(function() {
   $jq('.catalog__accordion-link').click(function(e) {
 
     if($jq('.catalog__accordion').hasClass('accordion--one')) {
-      $jq('.catalog__accordion-link').not($jq(this)).removeClass('accordion--active');
+      $jq('.catalog__accordion-link').not($jq(this)).removeClass('accordion--active-1');
       $jq('.accordion__link-list').not($jq(this).next()).slideUp(300);
     }
 
-    $jq(this).toggleClass('accordion--active').next().slideToggle(300);
+    $jq(this).toggleClass('accordion--active-1').next().slideToggle(300);
 
+    // $jq(this).removeClass('accordion--active-gray');
+    $jq('.catalog__accordion-link').not($jq(this)).addClass('accordion--active-gray');
+
+    // if($jq('.catalog__accordion-link').hasClass('accordion--active')) {
+    //   $jq('.catalog__accordion-link').not($jq(this)).removeClass('accordion--active-gray');
+    //  }
+    // else {
+    //     $jq(this).removeClass('accordion--active-gray');
+    //     $jq('.catalog__accordion-link').not($jq(this)).addClass('accordion--active-gray');
+    //   }
+
+// 1
+    // $jq(this).removeClass('accordion--active-gray');
+    // $jq('.catalog__accordion-link').not($jq(this)).addClass('accordion--active-gray');
+
+// 2
+//     $jq(this).removeClass('accordion--active-gray');
+//     $jq('.catalog__accordion-link').not($jq(this)).removeClass('accordion--active-gray');
+
+// 3
+//     $jq(this).removeClass('accordion--active-gray');
+//     $jq('.catalog__accordion-link').not($jq(this)).addClass('accordion--active-gray');
   });
 
+  $jq('.accordion--active-1').click(function(e) {
+    $jq('.catalog__accordion-link').removeClass('accordion--active-gray');
+
+  });
 
   // Выпадающее меню "Показать все" на catalog.html
   $jq('.form-filters__accordion-item').click(function(e) {
@@ -345,6 +388,11 @@ $jq(document).ready(function() {
     $jq.fancybox.close();
   });
 
+// Закрытие попапов  по нажатию на крестик
+  $jq('.popap-feedback-call-close').click(function(e) {
+    $jq.fancybox.close();
+    $jq.fancybox.close();
+  });
 
   // Выпадающий текст "Подробнее о заказе"" на попапе catalog.html
   $jq('.popap__accordion-link').click(function(e) {

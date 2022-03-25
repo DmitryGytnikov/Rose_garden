@@ -41,3 +41,25 @@
     url("../fonts/TTNorms-Bold.woff2") format("woff2"),
     url("../fonts/TTNorms-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "TT Norms";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("TT Norms Italic"),
+    local("TT-Norms-Italic"),
+    url("../fonts/TTNorms-Italic.woff2") format("woff2"),
+    url("../fonts/TTNorms-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TT Norms";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("TT Norms Medium Italic"),
+    local("TT-Norms-Medium-Italic"),
+    url("../fonts/TTNorms-MediumItalic.woff2") format("woff2"),
+    url("../fonts/TTNorms-MediumItalic.woff") format("woff");
+}
