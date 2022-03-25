@@ -106,7 +106,7 @@ $jq(document).ready(function() {
   $jq('.presentation__slider-big').slick({
     dots: true,
     fade: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     slidesToShow: 1,
     // variableWidth: true,
@@ -119,12 +119,13 @@ $jq(document).ready(function() {
   $jq('.main__about-slider').slick({
     dots: true,
     fade: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     slidesToShow: 1,
     // variableWidth: true,
     prevArrow: $jq('.presentation__button-slider--left-1'),
     nextArrow: $jq('.presentation__button-slider--right-1'),
+    // appendDots: $jq('.main__about-slider-dots'),
   });
 
 
@@ -187,7 +188,6 @@ $jq(document).ready(function() {
   // Cлайдер main__about-slider на main.html
   $jq('.about__qualification-slider').slick({
     dots: false,
-    slidesToShow: 1,
     slidesToShow: 2,
     slidesToScroll: 1,
     prevArrow: $jq('.presentation__button-slider--left-2'),
