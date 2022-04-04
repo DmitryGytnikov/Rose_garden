@@ -1,5 +1,9 @@
 'use strict';
 
+// jQuery : How To Fix the “$ is not a function” Error Using noConflict
+  var $jq = jQuery.noConflict();
+
+
 // Бургер
 let burger = document.querySelector(`.header-middle__btn`);
 let headerBottomMenu = document.querySelector(`.header-burger-menu`);
@@ -24,21 +28,28 @@ burger.addEventListener(`click`, function (evt) {
 //Появление кнопок соцсетей только в пределах статьи (десктоп)
 let socialButton = document.querySelector(`.social__list--hidden-desktop`);
 
-if (document.querySelector(`.article__box`)) {
-  let topPos = document.querySelector(`.article__box`).getBoundingClientRect().y;
-  console.log(topPos);
-}
-
 if (document.documentElement.clientWidth > 1060) {
-  if (socialButton && topPos) {
-    window.onscroll = function () {
-      if (window.pageYOffset > 700 && window.pageYOffset < 3900) {
-      // if (topPos > 700 ) {
+  if (socialButton) {
 
+    window.onscroll = function () {
+      let topPos = document.querySelector(`.article__box`).getBoundingClientRect().y;
+      // console.log(topPos);
+      let bottomPos = document.querySelector(`.article__link`).getBoundingClientRect().y;
+      // console.log(bottomPos);
+
+      // if (window.pageYOffset > 700 && window.pageYOffset < 3900) {
+      if (topPos < 70) {
         socialButton.classList.add(`shown`);
       } else {
         socialButton.classList.remove(`shown`);
       }
+
+      if (bottomPos < 360) {
+        socialButton.classList.remove(`shown`);
+        socialButton.classList.add(`shown-bottom`);
+      } else {
+          socialButton.classList.remove(`shown-bottom`);
+        }
     };
   }
 }
@@ -48,13 +59,26 @@ if (document.documentElement.clientWidth > 1060) {
 let socialButtonMob = document.querySelector(`.social__list--hidden-mobile`);
 
 if (document.documentElement.clientWidth <= 1060) {
+  // location.reload()// Перезагрузка страницы
   if (socialButtonMob) {
     window.onscroll = function () {
-      if (window.pageYOffset > 940 && window.pageYOffset < 3600) {
+      let topPos1 = document.querySelector(`.article__box`).getBoundingClientRect().y;
+      // console.log(topPos1);
+      let bottomPos1 = document.querySelector(`.article__link`).getBoundingClientRect().y;
+      console.log(bottomPos1);
+
+      if (topPos1 < 500) {
         socialButtonMob.classList.add(`shown`);
       } else {
         socialButtonMob.classList.remove(`shown`);
       }
+
+      if (bottomPos1 < 1050) {
+        socialButtonMob.classList.remove(`shown`);
+        socialButtonMob.classList.add(`shown-bottom`);
+      } else {
+          socialButtonMob.classList.remove(`shown-bottom`);
+        }
     };
   }
 }
@@ -138,10 +162,6 @@ if (hiddenElement6 && btn6) {
   }
   btn6.addEventListener('click', handleButtonClick6);
 }
-
-
-// jQuery : How To Fix the “$ is not a function” Error Using noConflict
-  var $jq = jQuery.noConflict();
 
 
 // Закрытие попапа fancybox по Esc
@@ -294,7 +314,7 @@ $jq(document).ready(function() {
       dots: false,
       slidesToShow: 5.2,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       infinite: false,
       prevArrow: $jq('.clearfix-slider__button--left'),
       nextArrow: $jq('.clearfix-slider__button--right'),
